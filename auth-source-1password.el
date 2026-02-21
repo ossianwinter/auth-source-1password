@@ -35,12 +35,12 @@
   :type 'string
   :group 'auth-source-1password)
 
-(defcustom auth-source-1password-construct-secret-reference 'auth-source-1password--1password-construct-query-path
+(defcustom auth-source-1password-construct-secret-reference 'auth-source-1password--1password-construct-entry-path
   "Function to construct the query path in the 1password store."
   :type 'function
   :group 'auth-source-1password)
 
-(defun auth-source-1password--1password-construct-query-path (_backend _type host user _port)
+(defun auth-source-1password--1password-construct-entry-path (_backend _type host user _port)
   "Construct the full entry-path for the 1password entry for HOST and USER.
 Usually starting with the `auth-source-1password-vault', followed
 by host and user."
